@@ -12,14 +12,21 @@ pandas = "^2.0.2"
 numpy = "^1.24.3"
 scikit-learn = "^1.2.2"
 transformers = "^4.30.1"
-torch = "^2.0.1"
-torchvision = "^0.15.2"
+torch = {version = "=2.0.1+cu118", source = "pytorch"}
+torchvision = {version = "=0.15.2+cu118", source = "pytorch"}
 pillow = "^9.5.0"
 pytesseract = "^0.3.10"
+layoutparser = "^0.3.4"
+datasets = "^2.13.1"
 
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.23.1"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu118/"
+secondary = true
 
 [build-system]
 requires = ["poetry-core"]
