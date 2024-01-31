@@ -1,7 +1,6 @@
-from transformers import pipeline
-from PIL import Image
-from PIL import ImageDraw
+from PIL import Image, ImageDraw
 from tqdm import tqdm
+from transformers import pipeline
 
 
 def crop_bbx_on_img(img_path, bbx_info):
@@ -50,8 +49,8 @@ def detect_product_details(img, model_path):
 
 if __name__ == "__main__":
 
-    img_path = "../angebot_data/images/3e7274ec-letok-01-2023-web_18.png"
-    product_model_path = "../model_data/150_product_area_only_epoch_run"
+    img_path = "../mock_data/1149219f-letok-01-2023-web-1_17.png"
+    product_model_path = "../model_data/300_product_area_only_epoch_run"
     product_details_model_path = "../model_data/300_epochs_subimages"
     img = Image.open(img_path)
     bbx_info = detect_products(img, product_model_path)

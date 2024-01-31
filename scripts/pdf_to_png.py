@@ -1,7 +1,9 @@
 import os
-import tqdm
-from scripts.example import useless_function
+
 import pdf2image
+import tqdm
+
+from scripts.example import useless_function
 
 
 def create_if_not_exists(path):

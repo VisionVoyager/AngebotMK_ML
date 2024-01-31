@@ -1,22 +1,20 @@
-import requests
-from transformers import pipeline
-from tqdm import tqdm
-import evaluate
-import torchvision
-from transformers import Trainer
-from transformers import TrainingArguments
-from transformers import OwlViTProcessor, OwlViTForObjectDetection
-from transformers import AutoModelForObjectDetection
-import torch
-import albumentations
-from transformers import AutoImageProcessor
-from PIL import Image, ImageDraw
-import os
-import numpy as np
-from datasets import Dataset
-from datasets import load_dataset
 import json
+import os
+
+import albumentations
+import evaluate
+import numpy as np
+import requests
+import torch
+import torchvision
+from datasets import Dataset, load_dataset
 from google.colab import drive
+from PIL import Image, ImageDraw
+from tqdm import tqdm
+from transformers import (AutoImageProcessor, AutoModelForObjectDetection,
+                          OwlViTForObjectDetection, OwlViTProcessor, Trainer,
+                          TrainingArguments, pipeline)
+
 drive.mount('/content/drive')
 
 

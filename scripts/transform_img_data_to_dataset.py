@@ -1,5 +1,6 @@
 import json
-from datasets import load_dataset, Dataset
+
+from datasets import Dataset, load_dataset
 from PIL import Image, ImageDraw
 
 
